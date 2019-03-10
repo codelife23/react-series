@@ -1,0 +1,57 @@
+.user-page__user {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    li {
+        font-weight: bold;
+        
+        span {
+            display: inline-block;
+            width: 100px;
+            font-weight: normal;
+        }
+    }
+}
+
+.user-page__edit {
+    display: block;
+    width: 130px;
+    height: 36px;
+    margin: 20px 0 0;
+    float: left;
+    background: #ede646;
+    line-height: 36px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+
+    .fa {
+        margin-right: 9px;
+        font-size: 18px;
+        vertical-align: -2px;
+    }
+}
+
+.user-page__remove {
+    display: block;
+    width: 130px;
+    height: 36px;
+    float: left;
+    margin: 20px 0 0 24px;
+    background: #4458a8;
+    line-height: 36px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+
+    .fa {
+        margin-right: 9px;
+        font-size: 18px;
+    }
+}

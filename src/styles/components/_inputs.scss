@@ -1,0 +1,36 @@
+input[type="text"],
+input[type="email"] {
+    &.c-input {
+        display: block;
+        width: 100%;
+        height: 38px;
+        padding: 0 15px;
+        background: #fff;
+        border: 1px solid #999999;
+        transition: border-color 0.35s ease 0s;
+        font-size: 16px;
+        outline: none;
+
+        &:focus {
+            border-color: #222222;
+        }
+    }
+}
+
+select {
+    &.c-select {
+        display: block;
+        width: 100%;
+        height: 38px;
+        padding: 0 15px;
+        background: #fff;
+        border: 1px solid #999999;
+        transition: border-color 0.35s ease 0s;
+        font-size: 16px;
+        outline: none;
+
+        &:focus {
+            border-color: #222222;
+        }
+    }
+}

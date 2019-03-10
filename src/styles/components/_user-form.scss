@@ -1,0 +1,48 @@
+.user-form {
+    display: block;
+    @media(min-width: $md) {
+        max-width: 400px;
+    }
+
+    input[type="email"],
+    input[type="text"] {
+        display: block;
+        width: 100%;
+        height: 38px;
+        padding: 0 15px;
+        margin: 0 0 18px;
+
+        &.last {
+            margin: 0;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        @media(min-width: $md) {
+            justify-content: flex-end;
+        }
+
+        .btn-1,
+        .btn-2 {
+            flex: 0 0 130px;
+            max-width: 130px;
+        }
+
+        .btn-1 {
+            margin: 20px 0 0;
+        }
+
+        .btn-2 {
+            margin: 20px 0 0 18px;
+        }
+    }
+}
+
+.user-form__input-error {
+    display: block;
+    margin: 0 0 4px;
+    color: red;
+    font-size: 14px;
+}

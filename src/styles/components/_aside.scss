@@ -1,0 +1,39 @@
+.aside {
+    padding: 25px 15px 0;
+}
+
+.navigation {
+    margin: 0;
+    padding: 0;
+    
+    li {
+        list-style: none;
+
+        + li {
+            margin: 12px 0 0;
+        }
+
+        &.active {
+            a {
+                background: #7d6ec2;
+                color: #fff;
+            }
+        }
+
+        a {
+            display: block;
+            height: 38px;
+            line-height: 38px;
+            background: #cac8d3;
+            color: #111220;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.35s ease 0s;
+
+            &:hover {
+                background: #7d6ec2;
+                color: #fff;
+            }
+        }
+    }
+}

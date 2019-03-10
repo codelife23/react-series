@@ -1,0 +1,28 @@
+.content {
+    padding: 25px 15px 40px;   
+}
+
+.add-user {
+    display: block;
+    width: 130px;
+    height: 36px;
+    background: #44c43f;
+    line-height: 36px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+
+    .fa {
+        margin-right: 9px;
+        font-size: 14px;
+        vertical-align: 1px;
+    }
+}
+
+.user-list {
+    li {
+        a {}
+    }
+}

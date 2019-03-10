@@ -1,0 +1,28 @@
+.c-btn {
+    display: block;
+    width: 130px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    outline: none;
+
+    .fa {
+        margin-right: 9px;
+        font-size: 18px;
+    }
+}
+
+.c-btn--cancel {
+    background: #4458a8;
+}
+
+.c-btn--submit {
+    background: #44c43f;
+}
