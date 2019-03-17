@@ -93,16 +93,99 @@
     }
 }
 
+.user-list-button {
+    margin: 16px 0 0;
+    height: 34px;
+}
+
+.user-list-button__delete {
+    display: none;
+    position: relative;
+    width: 34px;
+    height: 34px;
+    background: #e3e3e3;
+    cursor: pointer;
+    text-align: center;
+    font-size: 22px;
+
+    &:hover {
+        &:before {
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #d3d3d3;
+        transform: scale3d(0, 0, 1);
+        transition: transform 0.35s ease 0s;
+        transform-origin: 50%;
+    }
+    
+    .fa {
+        line-height: 33px;
+        position: relative;
+        z-index: 1;
+    }
+}
+
 .user-list {
     list-style: none;
     padding: 0;
-    margin: 24px 0 0;
+    margin: 16px 0 0;
 
     li {
         display: flex;
 
         + li {
             margin: 16px 0 0;
+        }
+    }
+}
+
+.user-list__check-wrap {
+    flex: 0 0 25px;
+    max-width: 25px;
+    padding: 2px 0 0;
+}
+
+.user-list__check {
+    display: block;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    position: relative;
+
+    input[type="checkbox"] {
+        position: absolute;
+        visibility: hidden;
+    }
+
+    span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        border: 1px solid #999999;
+        font-size: 14px;
+        text-align: center;
+
+        .fa {
+            opacity: 0;
+            line-height: 16px;
+            transition: opacity 0.2s ease 0s;
+        }
+    }
+
+    input[type="checkbox"]:checked + span {
+        .fa {
+            opacity: 1;
         }
     }
 }

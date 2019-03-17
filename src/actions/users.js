@@ -55,6 +55,27 @@ export const startRemoveUser = ({ id }) => {
     };
 };
 
+const multipleRemoveUser = (ids = []) => {
+    return {
+        type: 'MULTIPLE_REMOVE_USERS',
+        ids: ids
+    }
+};
+
+export const startMultipleRemoveUser = (ids) => {
+    return (dispatch) => {
+        let usersUpdate = {};
+
+        ids.forEach((id) => {
+            usersUpdate[id] = null;
+        });
+
+        return database.ref('users').update(usersUpdate).then(() => {
+            dispatch(multipleRemoveUser(ids));
+        });
+    }
+}
+
 const setUsers = (users) => ({
     type: 'SET_USERS',
     users

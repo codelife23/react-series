@@ -20,6 +20,17 @@ export default (state = usersReducerDefaultState, action) => {
             });
         case 'REMOVE_USER':
             return state.filter((user) => user.id !== action.id);
+        case 'MULTIPLE_REMOVE_USERS':
+            return state.filter((user) => {
+                let bool = true;
+                action.ids.forEach(id => {
+                    if (user.id == id) {
+                        bool = false;
+                    }
+                });
+
+                return bool;
+            });
         case 'SET_USERS':
             return action.users;
         default:

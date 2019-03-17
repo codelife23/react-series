@@ -4,10 +4,22 @@ import { Link } from 'react-router-dom';
 class UserListItem extends React.Component {
     onAskToRemove = () => {
         this.props.onAskToRemove(this.props.user.id, this.props.user.name);
+    };
+    onCheckboxChange = (e) => {
+        this.props.onCheckboxChange(e, this.props.user.id);
     }
     render () {
         return (
             <li>
+                <span className="user-list__check-wrap">
+                    <label className="user-list__check">
+                        <input type="checkbox" onChange={this.onCheckboxChange}></input>
+                        <span>
+                            <i className="fa fa-check" aria-hidden="true"></i>
+                        </span>
+                    </label>
+                </span>
+                
                 <span className="user-list__name-wrap">
                     <Link className="user-list__name" to={`/users/${this.props.user.id}`}>
                         {this.props.user.name}
