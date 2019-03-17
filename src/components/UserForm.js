@@ -20,6 +20,9 @@ export default class UserForm extends React.Component {
         const age = e.target.value;
         this.setState(() => ({ age }));
     }
+    onCancel = () => {
+        this.props.history.goBack();
+    }
     onSubmit = (e) => {
         e.preventDefault();
         
@@ -36,6 +39,7 @@ export default class UserForm extends React.Component {
                 name: this.state.name,
                 age: this.state.age
             });
+            this.props.history.goBack();
         } else {
             if (!nameValid) {
                 this.setState(() => ({ nameError: 'Provide valid name' }));
@@ -68,7 +72,7 @@ export default class UserForm extends React.Component {
 
                 <div className="buttons">
                     <div className="btn-1">
-                        <div className="c-btn c-btn--cancel" onClick={this.props.onCancel}>
+                        <div className="c-btn c-btn--cancel" onClick={this.onCancel}>
                             <i className="fa fa-ban" aria-hidden="true"></i>
                             Cancel
                         </div>

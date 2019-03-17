@@ -7,12 +7,8 @@ import UserForm from './UserForm';
 import { startAddUser } from '../actions/users';
 
 class AddUserPage extends React.Component {
-    onCancel = () => {
-        this.props.history.goBack();
-    }
     onSubmit = (user) => {
         this.props.startAddUser(user);
-        this.props.history.push('/users');
     }
     render() {
         return (
@@ -26,7 +22,11 @@ class AddUserPage extends React.Component {
                         <div className="content-here">
                             <div className="content">
                                 <h1 className="h1">Add new user</h1>
-                                <UserForm onSubmit={this.onSubmit} onCancel={this.onCancel} />
+                                <UserForm
+                                    onSubmit={this.onSubmit}
+                                    onCancel={this.onCancel}
+                                    history={this.props.history}
+                                />
                             </div>
                         </div>
                     </div>

@@ -7,9 +7,6 @@ import UserForm from './UserForm';
 import { startEditUser } from '../actions/users';
 
 class EditUserPage extends React.Component {
-    onCancel = () => {
-        this.props.history.goBack();
-    }
     onSubmit = (user) => {
         this.props.startEditUser(this.props.user.id, user);
     }
@@ -29,6 +26,7 @@ class EditUserPage extends React.Component {
                                 user={this.props.user}
                                 onSubmit={this.onSubmit}
                                 onCancel={this.onCancel}
+                                history={this.props.history}
                             />
                             </div>
                         </div>
